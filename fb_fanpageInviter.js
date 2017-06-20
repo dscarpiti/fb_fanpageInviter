@@ -13,13 +13,13 @@ var fb_fanpageInviter = {
 		
 		fb_fanpageInviter.createEvents();
 
-		fb_fanpageInviter.config.openFriendsLink = document.querySelectorAll( 'td a div' );
+		fb_fanpageInviter.config.openFriendsLink = document.querySelectorAll( 'div div a' );
 
 		var divCount = fb_fanpageInviter.config.openFriendsLink.length;
 
 		for( var i = 0 ; i < divCount ; i++ ){
-			if ( fb_fanpageInviter.config.openFriendsLink[ i ].innerHTML == 'Convidar amigos para curtir esta Página' ){
-				fb_fanpageInviter.config.openFriendsLink = fb_fanpageInviter.config.openFriendsLink[ i ].parentElement;
+			if ( fb_fanpageInviter.config.openFriendsLink[ i ].innerHTML == 'Convide seus amigos' ){
+				fb_fanpageInviter.config.openFriendsLink = fb_fanpageInviter.config.openFriendsLink[ i ];//.parentElement;
 				break;
 			}
 		}
